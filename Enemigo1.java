@@ -10,15 +10,13 @@ public class Enemigo1 extends Actor
 {
     GifImage eGif1= new GifImage("enemigo1.gif");
     int cont=1;
-    int speed=3;
+    int speed=5;
     public void act()
     {
         setImage(eGif1.getCurrentImage());
         cont++;
         //enemyAtack();
         moveAround();
-        
-        MyWorld2 myWorld2=new MyWorld2();
         
     }
     

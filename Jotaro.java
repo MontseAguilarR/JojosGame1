@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Jotaro extends Actor{
     private static int OFFSET=5;
-    public int score=0;
+    private int score=0;
     public ScoreManager scoreManager;
     private GreenfootSound esmeraldaSound=new GreenfootSound("SonidoEsmeralda.mp3");
     private GreenfootSound cartaSound=new GreenfootSound("SonidoCarta.mp3");
@@ -131,6 +131,7 @@ public class Jotaro extends Actor{
                     myWorld.addObject(startButton, 288, 542);
                     myWorld.addObject(gameOver, 289,321);
                     getWorld().removeObject(this);
+                    saveScore();
                 }
             }
             
@@ -141,6 +142,13 @@ public class Jotaro extends Actor{
             
     }
 
+    public void saveScore()
+    {
+        String name=Greenfoot.ask("Introduce tu nombre: ");
+        Record record=new Record(name, score);
+        RecordManager recordManager=new RecordManager(5, "RecordFile.txt");
+        recordManager.save(record);
+    }
     
     public void moreFast(){
         MyWorld3 myWorld3=new MyWorld3();
