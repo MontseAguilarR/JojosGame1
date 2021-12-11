@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=RecordsP
+comment1.params=
+comment1.target=RecordsP()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ imprimeGameScore()
+comment4.params=
+comment4.target=void\ enterToMain()
+numComments=5
