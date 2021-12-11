@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Jotaro
+comment1.params=
+comment1.target=Jotaro()
+comment10.params=
+comment10.target=void\ moreFast()
+comment11.params=
+comment11.target=void\ playE()
+comment12.params=
+comment12.target=void\ playC()
+comment2.params=scoreManager
+comment2.target=Jotaro(ScoreManager)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ handleKeys()
+comment5.params=
+comment5.target=void\ itemsPick()
+comment6.params=
+comment6.target=void\ oraOraAtack2()
+comment7.params=
+comment7.target=void\ jotaroHealthBar()
+comment8.params=
+comment8.target=void\ jotaroDie()
+comment9.params=
+comment9.target=void\ saveScore()
+numComments=13
