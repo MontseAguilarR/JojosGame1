@@ -11,7 +11,7 @@ public class MyWorld3 extends MyLevels implements ScoreManager
     private GreenfootSound myWorldEndSound=new GreenfootSound("Musica FinalEnemigo.mp3");
     HealthBar healthBarDio=new HealthBar();
     HealthBar healthBarJotaro=new HealthBar();
-    
+    private int timer = 400;
 
      public MyWorld3()
     {     
@@ -37,6 +37,19 @@ public class MyWorld3 extends MyLevels implements ScoreManager
         }
     }
     
+    public void contTime(){
+    timer--;
+    if (timer <= 0) {
+        Greenfoot.stop();
+    }
+    this.showText("Tiempo: "+timer, 57, 71);
+    if(timer==0)
+    {
+        Greenfoot.setWorld(new Menu());
+        myWorldEndSound.stop();
+    }
+    }
+    
     public void updateScore(int jotaroScore)
     {
         this.showText("Puntaje: " + jotaroScore, 500,35);
@@ -52,6 +65,7 @@ public class MyWorld3 extends MyLevels implements ScoreManager
     
     private void prepare()
     {
+        this.showText("Level3", 60, 35);
         addObject(new Dio(),435,176);
         addObject(new Jotaro(this),65,547);
         addObject(healthBarJotaro,282,559);

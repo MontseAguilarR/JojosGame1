@@ -39,7 +39,6 @@ public class Dio extends Actor
                     getWorld().removeObject(this);
                     dioDie.play();
                     Greenfoot.setWorld(new WinScreen());
-                    
                 }
             }
             

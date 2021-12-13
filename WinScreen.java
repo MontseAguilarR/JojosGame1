@@ -15,7 +15,25 @@ public class WinScreen extends World
      */
     public WinScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
+        
         super(580, 600, 1);  
+    }
+    
+    public void act(){
+        boolean oneTime=false;
+       if(oneTime==false)
+        {
+            get();
+            Greenfoot.setWorld(new Menu());
+            oneTime=true;
+        }
+        
+    }
+    
+    public void get()
+    {
+        Jotaro jotaro=new Jotaro();
+        jotaro.saveScore();
     }
 }

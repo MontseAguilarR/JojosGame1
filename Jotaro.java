@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Jotaro extends Actor{
     private static int OFFSET=5;
-    private int score=0;
+    public static int score;
     public ScoreManager scoreManager;
     private GreenfootSound esmeraldaSound=new GreenfootSound("SonidoEsmeralda.mp3");
     private GreenfootSound cartaSound=new GreenfootSound("SonidoCarta.mp3");
@@ -32,7 +32,11 @@ public class Jotaro extends Actor{
         jotaroDie();
         oraOraAtack2();
         jotaroHealthBar();
+        
     }
+    
+    
+
     
     private void handleKeys(){
         int x=getX();

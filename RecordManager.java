@@ -2,8 +2,9 @@ import java.io.*;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import greenfoot.*;
 
-public class RecordManager {
+public class RecordManager extends Actor{
 
     private int maxSize;
     private String fileName;

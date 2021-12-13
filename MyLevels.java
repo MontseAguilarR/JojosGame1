@@ -6,18 +6,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyLevels extends World
+public class MyLevels extends World 
 {
     HealthBar healthBar=new HealthBar();
-    /**
-     * Constructor for objects of class MyLevels.
-     * 
-     */
+    
+    
     public MyLevels()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(580, 600, 1); 
+        super(580, 600, 1);
     }
+     public void act() {
+     
+    
+    }
+         
     
     public void updateScore(int jotaroScore)
     {

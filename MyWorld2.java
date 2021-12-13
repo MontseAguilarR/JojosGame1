@@ -10,6 +10,9 @@ public class MyWorld2 extends MyLevels implements ScoreManager
 {
     private GreenfootSound myWorld2Sound=new GreenfootSound("MyWorldSound.mp3");
    HealthBar healthBar=new HealthBar();
+   Jotaro jotaro=new Jotaro(this);
+   ScoreManager scoreManager;
+   private int timer = 300;
    
     public MyWorld2()
     {   
@@ -17,15 +20,37 @@ public class MyWorld2 extends MyLevels implements ScoreManager
         prepare();
     }
     
+    public MyWorld2(Jotaro jotaro)
+    {
+       int score;
+       score=this.jotaro.score+jotaro.score;   
+    }
+    
     public void act(){
         myWorld2Sound.play();
         enterNextLevel();
     }
+    
+    public void contTime(){
+    timer--;
+    if (timer <= 0) {
+        Greenfoot.stop();
+    }
+    this.showText("Tiempo: "+timer, 57, 71);
+    if(timer==0)
+    {
+        Greenfoot.setWorld(new Menu());
+        myWorld2Sound.stop();
+    }
+    }
+    
 
       public HealthBar getHealthBar(){
         return healthBar;
        }
 
+       
+       
     public void enterNextLevel()
     {
         
@@ -44,10 +69,11 @@ public class MyWorld2 extends MyLevels implements ScoreManager
     private void prepare()
     {
         this.showText("Puntaje", 500, 35);
+        this.showText("Level2", 60, 35);
         addObject(healthBar,293,44);
         
         
-        addObject(new Jotaro(this),31,37);
+        addObject(jotaro,31,37);
         
         addObject(new Wall(),31,164);
         addObject(new Wall(),544,162);

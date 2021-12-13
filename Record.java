@@ -1,7 +1,8 @@
-import greenfoot.*;  
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 import java.util.Objects;
 
-public class Record {
+public class Record extends Actor{
     private int score;
     private String player;
 
